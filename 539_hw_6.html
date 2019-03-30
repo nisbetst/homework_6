@@ -6,8 +6,8 @@
 	<style type="text/css">
 
 		html, body{
-			overflow: hidden;
-			overflow-x: hidden;
+			/* overflow-y: hidden; */
+			/* overflow-x: hidden; */
 			width: 100%;
 			height: 100%;
 			}
@@ -24,6 +24,8 @@
 
 <h1>Drawing Canvas</h1>
 <canvas id="myCanvas">Your browser does not support html5 tag.</canvas>
+
+Color:<input type="color" id = "colorpicker" value="#ff0000">
 
 <script>
 
@@ -49,7 +51,7 @@
     draw();
 	})
 
-	window.addEventListener('touchmove', function (e){
+	c.addEventListener('touchmove', function (e){
 		x = e.x - ctx.canvas.offsetLeft;
 		y = e.y - ctx.canvas.offsetTop;
 		draw();
@@ -80,8 +82,18 @@
 		 }
 	 })
 
+	window.addEventListener('orientationchange', function (e){
+		location.reload();
+	})
 
+	window.addEventListener('input', function (e){
+		var newcolor = document.getElementById('colorpicker').value
+		color = newcolor
+	})
 </script>
+
+
+
 </body>
 
 </html>
