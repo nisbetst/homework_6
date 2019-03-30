@@ -51,7 +51,7 @@ Color:<input type="color" id = "colorpicker" value="#ff0000">
     draw();
 	})
 
-	window.addEventListener('touchmove', function (e){
+	window.addEventListener('touchstart', function (e){
 		x = e.x - ctx.canvas.offsetLeft;
 		y = e.y - ctx.canvas.offsetTop;
 		draw();
