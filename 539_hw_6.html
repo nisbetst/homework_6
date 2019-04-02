@@ -53,8 +53,8 @@ Color:<input type="color" id = "colorpicker" value="#ff0000">
 
 	window.addEventListener('touchmove', function (e){
 		console.log('hello');
-		x = e.x - ctx.canvas.offsetLeft;
-		y = e.y - ctx.canvas.offsetTop;
+		x = e.pageX;
+		y = e.pageY;
 		draw();
 	})
 
